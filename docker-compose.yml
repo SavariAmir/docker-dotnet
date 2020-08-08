@@ -1,0 +1,15 @@
+version: "3"
+services:
+    web-api:
+        build:
+            context: ./WebApplication
+            dockerfile: Dockerfile
+        ports: 
+            - "8080:80"
+        volumes: 
+            - .:/app/test
+    # tests:
+    #     build: 
+    #         context: ./test
+    #         dockerfile: Dockerfile
+    #     command: ["dotnet", "test"]
