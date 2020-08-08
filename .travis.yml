@@ -10,4 +10,4 @@ before_install:
 
 
 scripts: 
-    -  docker run web-app
+    -  docker run -d web-app
