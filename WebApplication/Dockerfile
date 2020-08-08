@@ -1,11 +1,11 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 WORKDIR /app
 # Copy csproj and restore as distinct layers
-COPY WebApplication.csproj ./
+COPY WebApplication/WebApplication.csproj ./
 RUN dotnet restore
 # Copy everything else and build
 COPY . ./
-RUN dotnet publish WebApplication.csproj -c Release -o out
+RUN dotnet publish WebApplication/WebApplication.csproj -c Release -o out
 
 
 
